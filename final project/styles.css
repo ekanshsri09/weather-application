@@ -1,0 +1,57 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+            background-size: 400% 400%;
+            animation: gradientFlow 12s ease infinite;
+            min-height: 100vh;
+            color: white;
+            /* Add a subtle overlay for extra glass effect */
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: rgba(255,255,255,0.07);
+            pointer-events: none;
+            z-index: 0;
+        }
+        @keyframes gradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.13);
+            backdrop-filter: blur(24px) saturate(120%);
+            border: 1.5px solid rgba(255, 255, 255, 0.22);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.13);
+            border-radius: 28px;
+            padding: 2.5rem;
+            position: relative;
+            z-index: 1;
+            transition: box-shadow 0.3s;
+        }
+        .glass-card:hover {
+            box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+        }
+        
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #7f9cf5;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: rgba(255,255,255,0.08);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(120,120,255,0.18);
+            border-radius: 8px;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
