@@ -22,5 +22,3 @@ A simple and responsive weather application that fetches real-time weather data 
 1. Enter the name of a city.
 2. Press "Search" or hit Enter.
 3. View the current weather details instantly.
-
-Let me know if you'd like to add sections like installation instructions, screenshots, or API usage!
